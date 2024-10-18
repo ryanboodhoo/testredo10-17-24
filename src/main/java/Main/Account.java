@@ -30,8 +30,10 @@ public abstract class Account {
         if (amount <= 0) {
             System.out.println("Invalid amount");
         } else {
-            double newBalance = balance + amount;
-            double interest = getInterestRate(newBalance);
+
+            double newBalance = balance += amount;
+
+            double interest = getInterestRate(newBalance,amount);
 
             balance = newBalance + interest;
 
@@ -41,11 +43,11 @@ public abstract class Account {
         }
     }
 
-    public double getInterestRate(double currentBalance) {
+    public double getInterestRate(double currentBalance,double amount) {
         if (currentBalance > 1000) {
-            return currentBalance * 0.10;
+            return amount * 0.10;
         } else {
-            return currentBalance * 0.05;
+            return amount * 0.05;
         }
     }
 
