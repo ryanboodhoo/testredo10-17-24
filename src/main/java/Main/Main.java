@@ -7,7 +7,7 @@ public class Main {
 
         Checking checkingAccount1 = new Checking();
 
-        Customer customer1 = new Customer("John", "Doe" , checkingAccount1);
+        Customer customer1 = new Customer("John", "Boodhoo" , checkingAccount1);
 
         bank.addCustomer(customer1);
 
